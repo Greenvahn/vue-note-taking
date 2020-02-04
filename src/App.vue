@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <notes></notes>
-    <input-component></input-component>
+    <input-component v-bind:placedata="placeholder"></input-component>
   </div>
 </template>
 
@@ -17,7 +17,9 @@ export default {
   },
   data(){
       return{
-
+        notes: [],
+        timestamps: [],
+        placeholder: "Enter a note"
       }
     },
   computed: {
