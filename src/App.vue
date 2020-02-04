@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <h1>Digital posit</h1>
+    <h1 class="title">Digital posit</h1>
     <p>Single page appliaction to take notes. Start by typing something in the input field. When you are ready press enter.</p>
+    <div class="message is-info">
+      <p class="message-body">Start by typing something in the input field. When you are ready press enter.</p>
+    </div>
     <notes v-bind:notes="notes" v-bind:timestamps="timestamps"></notes>
     <input-component v-bind:placedata="placeholder" @newInput="addNote"></input-component>
   </div>
@@ -55,4 +58,14 @@ body {
   height: 100%;
   margin: 0 auto;
 }
+
+p{
+  margin-bottom: 20px;
+}
+
+.message-body{
+  padding: 15px;
+  margin-bottom: 50px;
+}
+
 </style>
